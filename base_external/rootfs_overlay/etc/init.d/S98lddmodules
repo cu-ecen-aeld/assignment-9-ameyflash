@@ -4,18 +4,18 @@ case "$1" in
     start)
         echo "Loading LDD Module"
         #load the scull driver on start-up
-        /usr/bin/scull_load
+        scull_load
         #load the faulty driver on start-up
-        /usr/bin/module_load faulty
+        module_load faulty
         #load hello module on start-up
         modprobe hello
         ;;
     stop)
         echo "Unloading LDD Module"
         #unload scull driver on shutdown
-        /usr/bin/scull_unload
+        scull_unload
         #unload faulty driver on shutdown
-        /usr/bin/module_unload faulty
+        module_unload faulty
         #unload hello module on shutdown
         rmmod hello
         ;;
