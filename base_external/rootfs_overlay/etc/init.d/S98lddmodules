@@ -9,6 +9,8 @@ case "$1" in
         module_load faulty
         #load hello module on start-up
         modprobe hello
+        #load aesd char driver module on start-up
+        aesdchar_load
         ;;
     stop)
         echo "Unloading LDD Module"
@@ -18,6 +20,8 @@ case "$1" in
         module_unload faulty
         #unload hello module on shutdown
         rmmod hello
+        #unload aesd char driver module on shutdown
+        aesdchar_unload
         ;;
     *)
         echo "Usage: $0 <start|stop>"
