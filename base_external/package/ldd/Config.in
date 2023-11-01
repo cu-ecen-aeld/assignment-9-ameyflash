@@ -1,6 +1,6 @@
 
-config BR2_PACKAGE_AESD_CHAR_DRIVER
-	bool "aesd-char-driver"
+config BR2_PACKAGE_LDD
+	bool "ldd"
 	help
-	  Supports building and installing the AESD character driver
-	  components into the root filesystem in the kernel image.
+	  Supports building and installing the misc-modules and scull components
+	  into the root filesystem in the kernel image.
